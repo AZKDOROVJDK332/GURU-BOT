@@ -14,16 +14,16 @@ let handler = async (m, { conn }) => {
 
     if (!img) throw img
 
-    await conn.sendFile(m.chat, img, '', 'made by Guru', m, 0, { thumbnail: await (await fetch(img)).buffer() })
+    await conn.sendFile(m.chat, img, '', 'زورو عمك', m, 0, { thumbnail: await (await fetch(img)).buffer() })
 
 }
 
-handler.help = ['blackpink']
+handler.help = ['بلاك-بينك']
 
 handler.tags = ['image']
 
 handler.limit = false
 
-handler.command = /^(bpink|bp|blackpink)$/i
+handler.command = /^بلاك-بينك$/i
 
 export default handler
