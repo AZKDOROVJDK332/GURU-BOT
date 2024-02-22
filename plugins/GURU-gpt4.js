@@ -5,7 +5,7 @@ import {delay} from '@whiskeysockets/baileys'
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   try {
-    if (!text) throw `uhm.. what do you want to say?`
+    if (!text) throw `امم.. ماذا تريد أن تقول?`
     m.react('🤖')
     //await displayLoadingScreen(conn, m.chat)
 
@@ -21,17 +21,17 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
        
   } catch (error) {
     console.error(error);
-    m.reply('Oops! Something went wrong. , we are trying had to fix it asap');
+    m.reply('أُووبس! هناك خطأ ما. ، ونحن نحاول إصلاحه في أسرع وقت ممكن');
   }
 }
-handler.help = ['gemini <text>']
+handler.help = ['جي-بي-تي4']
 handler.tags = ['tools']
-handler.command = /^(gpt4)$/i
+handler.command = /^جي-بي-تي4$/i
 
 export default handler
 
 async function typewriterEffect(conn, quoted ,from, text) {
-    let { key } = await conn.sendMessage(from, { text: 'Thinking...' } , {quoted:quoted})
+    let { key } = await conn.sendMessage(from, { text: 'بحث...' } , {quoted:quoted})
   
     for (let i = 0; i < text.length; i++) {
       const noobText = text.slice(0, i + 1);
