@@ -5,7 +5,7 @@ const genAI = new GoogleGenerativeAI('AIzaSyBWozNQdyPr6q5D7U1Izfl3BArjnNfwGuA');
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   try {
-    if (!text) throw امم..ماذا تريد أن تقول?`
+    if (!text) throw `امم..ماذا تريد أن تقول?`
     m.react('🤖')
     await displayLoadingScreen(conn, m.chat)
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
